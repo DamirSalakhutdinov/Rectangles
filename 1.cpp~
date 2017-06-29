@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	int b;
+	cin >> b;
+	int* a = (int*)malloc(b * sizeof(int));
+		
+	for(int i = 0; i < b; i++) {
+		a[i] = i;		
+		cout << *(a+i) << endl;
+	}
+	return 0;
+}

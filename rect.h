@@ -11,9 +11,9 @@ class Point{
 public:
     Point();
     Point(int, int);
+    void getVal();
     void getVal(ifstream&);
     void setVal(int, int);
-//    void moveOn(int x1, int y1);
     int diffX(Point a);
     int diffY(Point a);
     void print();
@@ -27,21 +27,18 @@ class Rect{
 public:
 	Rect();
 	Rect(Point a, Point b);
-//	~Rect();
-	void setPoints(Point,Point);//задаем точки 
+	void setPoints(Point,Point);	//задаем точки 
 	void getPoints(ifstream&);
+	void getPoints();
 	void print(); // печать атрибутов
-	//void moveToPoint(Point а); // пермещение прямунольника в точку а (центр)
-	//void mirrorV(); // отображение прямоугольника относительно оси OY
-	//void mirrorH(); // отображение прямоугольника относительно оси OX
-	//void rotate90();// правый поворот на 90гр. относительно центра
 	Point copyHl();
 	Point copyLr();
 	Point projX(Rect);
 	Point projY(Rect);
-	Rect* crossRect(Rect);//вернуть прямоугольник — пересечение с прямоугольником а
-	Rect* unionRect(Rect);
-	Rect* residRect(Rect);
+
+	Rect* crossRect(Rect);	//перечесение
+	Rect* unionRect(Rect);	//объединение
+	Rect* residRect(Rect);	//разность
 	int operator==(Rect&);
 };
 

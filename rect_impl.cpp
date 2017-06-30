@@ -171,8 +171,6 @@ Rect* Rect::unionRect(Rect a){
 	thisy.setVal(lr.copyY(), hl.copyY());
 	
 	
-//	if(px == ax && thisx == px && !(py == bad));
-//	else if(py == ay && thisy == py && !(px == bad));
 	if(ax == thisx && !(py == bad));
 	else if(ay == thisy && !(px == bad));
 	else {
@@ -247,7 +245,7 @@ Rect* Rect::residRect(Rect a) {
 	}
 
 	if(nhl == nlr) {
-		//cout << "не вычелось\n";
+		//cout << "не вычлось\n";
 		return NULL;
 	} else {
 		res->setPoints(nhl, nlr);
@@ -270,7 +268,6 @@ int Point::operator==(const Point& a){
 };
 
 int Rect::operator==(Rect& a){
-//	if(this->diffX(a) == 0 && this->diffY(a) == 0)
 	if(this->copyHl() == a.copyHl() && this->copyLr() == a.copyLr())
 		return 1;
 	else 

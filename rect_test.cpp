@@ -56,6 +56,6 @@ int main() {
 	cout << "видимых четырехугольников:" << endc << endl;		
 	delete[] tmp;
 	fcin.close();
-	//fcout.close();
+
 	return 0;
 }
